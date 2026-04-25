@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>GROOT</title>
+<link rel="stylesheet" href="mainpage.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+    <div class="logo">GROOT</div>
+
+    <div class="search-bar">
+        <input type="text" placeholder="Search ideas...">
+    </div>
+
+    <div class="profile" onclick="toggleProfile()">
+        <img src="https://via.placeholder.com/35">
+    </div>
+</header>
+
+<!-- PROFILE POPUP -->
+<div class="profile-popup" id="profilePopup">
+    <img src="https://via.placeholder.com/80">
+    <h3>Uday Kumar</h3>
+    <p>uday@email.com</p>
+    <button class="signout-btn">Sign Out</button>
+</div>
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+    <div class="menu">
+        <div>Home</div>
+        <div>Categories</div>
+        <div>Community</div>
+    </div>
+
+    <div class="settings-section">
+        <div class="settings" onclick="toggleSettings()">⚙ Settings</div>
+        <div class="settings-menu" id="settingsMenu">
+            <div onclick="openPanel('personalization')">Personalization</div>
+            <div onclick="openPanel('help')">Help</div>
+            <div>Logout</div>
+        </div>
+    </div>
+</aside>
+
+<!-- MAIN CONTENT WRAPPER -->
+<div class="main-content">
+
+    <!-- HERO -->
+    <section class="hero">
+        <h1>Welcome to GROOT</h1>
+        <p class="subline">Where Ideas Grow, Connect & Evolve 🚀</p>
+
+        <div class="hero-buttons">
+            <button class="btn">Explore Ideas</button>
+            <button class="btn">Present Ideas</button>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about">
+        <h2>About GROOT</h2>
+        <p>
+            GROOT is a modern idea-sharing platform built to empower innovation and collaboration.
+            Users can explore trending ideas, present their own concepts, and connect with others
+            who share similar interests. The platform encourages creativity, discussion, and teamwork,
+            transforming raw thoughts into structured, actionable solutions.
+        </p>
+    </section>
+
+    <!-- ADVANTAGES -->
+    <section class="advantages">
+        <h2>Advantages</h2>
+
+        <div class="adv-box">
+            <h3>Innovation Hub</h3>
+            <p>Discover and refine creative ideas from a growing community.</p>
+        </div>
+
+        <div class="adv-box">
+            <h3>Collaboration</h3>
+            <p>Connect and build projects with like-minded thinkers.</p>
+        </div>
+
+        <div class="adv-box">
+            <h3>Structured Growth</h3>
+            <p>Turn concepts into actionable and scalable solutions.</p>
+        </div>
+    </section>
+
+</div>
+
+<!-- PERSONALIZATION PANEL -->
+<div class="panel" id="personalization">
+    <h2>Personalization</h2>
+    <div class="option">Theme Mode</div>
+    <div class="option">Accent Color</div>
+    <div class="option">Language</div>
+    <div class="option">Notifications</div>
+    <div class="option">Interface Density</div>
+</div>
+
+<!-- HELP PANEL -->
+<div class="panel" id="help">
+    <h2>Help & FAQs</h2>
+
+    <p><strong>Q:</strong> What is GROOT?</p>
+    <p>A collaborative idea-sharing platform.</p>
+
+    <p><strong>Q:</strong> How to present ideas?</p>
+    <p>Click the Present Ideas button on the homepage.</p>
+
+    <p><strong>Q:</strong> How to collaborate?</p>
+    <p>Explore ideas and connect with creators.</p>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="copyright">
+        © 2026 GROOT. All Rights Reserved.
+    </div>
+</footer>
+
+<script>
+function toggleSettings() {
+    document.getElementById("settingsMenu").classList.toggle("show");
+}
+
+function toggleProfile() {
+    document.getElementById("profilePopup").classList.toggle("show");
+}
+
+function openPanel(id) {
+    document.getElementById("personalization").style.display = "none";
+    document.getElementById("help").style.display = "none";
+    document.getElementById(id).style.display = "block";
+}
+</script>
+
+</body>
+</html>
+
